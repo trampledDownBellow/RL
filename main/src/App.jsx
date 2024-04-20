@@ -1,6 +1,8 @@
 import React from 'react';
 import './style.css';
 import './main.jsx';
+import './main_login'
+import './style_login.css'
 import { useEffect } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
@@ -156,9 +158,46 @@ function App() {
             <button className='btn next' name="arrow-forward-outline"></button>
           </nav>
         </section>
-        <section id="knowledge" style={{ backgroundImage: 'urlhttps://cdn5.idcgames.com/storage/image/1343/game_home_bg_section_2/default.jpg)' }}></section>
-        <section id="space" style={{ backgroundImage: 'urlhttps://cdn5.idcgames.com/storage/image/1343/game_home_bg_section_2/default.jpg)' }}></section>
-        <section id="future" style={{ backgroundImage: 'urlhttps://cdn5.idcgames.com/storage/image/1343/game_home_bg_section_2/default.jpg)' }}></section>
+        <section id="knowledge" style={{ backgroundImage: 'url(https://cdn5.idcgames.com/storage/image/1343/game_home_bg_section_2/default.jpg)' }}>
+
+        </section>
+        <section id="space" style={{ backgroundImage: 'url(https://cdn5.idcgames.com/storage/image/1343/game_home_bg_section_2/default.jpg)' }}></section>
+        <section id="future"
+                 style={{backgroundImage: 'urlhttps://cdn5.idcgames.com/storage/image/1343/game_home_bg_section_2/default.jpg)'}}>
+          <div className="container right-panel-active">
+
+            <div className="container__form container--signup">
+              <form action="#" className="form" id="form1">
+                <h2 className="form__title">Sign Up</h2>
+                <input type="text" placeholder="User" className="input"/>
+                <input type="email" placeholder="Email" className="input"/>
+                <input type="password" placeholder="Password" className="input"/>
+                <button className="btn">Sign Up</button>
+              </form>
+            </div>
+
+
+            <div className="container__form container--signin">
+              <form action="#" className="form" id="form2">
+                <h2 className="form__title">Sign In</h2>
+                <input type="email" placeholder="Email" className="input"/>
+                <input type="password" placeholder="Password" className="input"/>
+                <a href="#" className="link">Forgot your password?</a>
+                <button className="btn">Sign In</button>
+              </form>
+            </div>
+            <div className="container__overlay">
+              <div className="overlay">
+                <div className="overlay__panel overlay--left">
+                  <button className="btn" id="signIn">Sign In</button>
+                </div>
+                <div className="overlay__panel overlay--right">
+                  <button className="btn" id="signUp">Sign Up</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   );
