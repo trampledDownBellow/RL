@@ -1,11 +1,13 @@
 import React from 'react';
 import './style.css';
 import './main.jsx';
-import './main_login'
 import './style_login.css'
 import { useEffect } from 'react';
 import gsap from 'gsap';
+import logo from './rlLogo.png'
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import { Link } from "react-router-dom";
+import { BrowserRouter } from 'react-router-dom'
 
 
 function App() {
@@ -81,7 +83,6 @@ function App() {
       });
     });
 
-    // Cleanup function
     return () => {
       document.removeEventListener('click', activate, false);
       window.removeEventListener('scroll', () => { });
@@ -95,11 +96,11 @@ function App() {
   return (
     <div className="App">
       <header id="myHeader">
-        <img id="logo" src="rlLogo.png" alt="logo" />
+        <img id="logo" src={logo} />
         <nav>
           <a href="#vision">Крамниця</a>
           <a href="#knowledge">Бібліотека</a>
-          <a href="#space">Спільнота</a>
+          <a href="http://localhost:5173/">Спільнота</a>
           <a href="#future">"Аккаунт"</a>
           <button id="openmenu">
             <span></span>
@@ -163,15 +164,15 @@ function App() {
         </section>
         <section id="space" style={{ backgroundImage: 'url(https://cdn5.idcgames.com/storage/image/1343/game_home_bg_section_2/default.jpg)' }}></section>
         <section id="future"
-                 style={{backgroundImage: 'urlhttps://cdn5.idcgames.com/storage/image/1343/game_home_bg_section_2/default.jpg)'}}>
+          style={{ backgroundImage: 'urlhttps://cdn5.idcgames.com/storage/image/1343/game_home_bg_section_2/default.jpg)' }}>
           <div className="container right-panel-active">
 
             <div className="container__form container--signup">
               <form action="#" className="form" id="form1">
                 <h2 className="form__title">Sign Up</h2>
-                <input type="text" placeholder="User" className="input"/>
-                <input type="email" placeholder="Email" className="input"/>
-                <input type="password" placeholder="Password" className="input"/>
+                <input type="text" placeholder="User" className="input" />
+                <input type="email" placeholder="Email" className="input" />
+                <input type="password" placeholder="Password" className="input" />
                 <button className="btn">Sign Up</button>
               </form>
             </div>
@@ -180,8 +181,8 @@ function App() {
             <div className="container__form container--signin">
               <form action="#" className="form" id="form2">
                 <h2 className="form__title">Sign In</h2>
-                <input type="email" placeholder="Email" className="input"/>
-                <input type="password" placeholder="Password" className="input"/>
+                <input type="email" placeholder="Email" className="input" />
+                <input type="password" placeholder="Password" className="input" />
                 <a href="#" className="link">Forgot your password?</a>
                 <button className="btn">Sign In</button>
               </form>
